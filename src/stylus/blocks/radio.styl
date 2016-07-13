@@ -1,0 +1,63 @@
+.radio
+	position relative
+
+	&__input:not(:checked),
+	&__input:checked
+		position absolute
+		right -9999px
+
+	&__input:not(:checked) + label,
+	&__input:checked + label
+		padding-right 38px
+		cursor pointer
+
+	/* checkbox aspect */
+	&__input:not(:checked) + label:before,
+	&__input:checked + label:before
+		content ''
+		position absolute
+		top 2px
+		right 0
+		display block
+		height 28px
+		width 28px
+		background-image url(images/bg-radio-1.png)
+		bg-image()
+		border-radius(50%)
+
+	/* checked mark aspect */
+	&__input:not(:checked) + label:after,
+	&__input:checked + label:after
+		content ''
+		position absolute
+		top 2px
+		right 0
+		display block
+		height 28px
+		width 28px
+		background-image url(images/bg-radio-2.png)
+		bg-image()
+		border-radius(50%)
+
+	/* checked mark aspect changes */
+	&__input:not(:checked) + label:after
+		-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"')
+		filter unquote('alpha(opacity=0)')
+		-moz-opacity 0
+		-khtml-opacity 0
+		opacity 0
+
+	&__input:checked + label:after
+		-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"')
+		filter unquote('alpha(opacity=100)')
+		-moz-opacity 1
+		-khtml-opacity 1
+		opacity 1
+
+	&__label
+		display block
+		font-size 22px
+		line-height 30px
+
+		&_alt
+			font-size 16px
