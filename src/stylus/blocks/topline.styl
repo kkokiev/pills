@@ -1,0 +1,49 @@
+.topline
+	min-height 7px 
+	width 100%  
+	background brand
+	color white
+	font-size 10px 
+	line-height 14px 
+	text-align center
+	
+	+below(size-tablet)
+		display none
+	
+	&__wrap
+		position relative
+		max-width 600px
+		margin-x(auto)
+		padding-y(6px)
+		padding-x(50px)
+		
+	&__link
+		color brand-2
+		text-decoration underline
+		
+		&:hover,
+		&:focus
+			text-decoration none
+			
+	&__close-btn
+		position absolute
+		top 0px
+		left 0
+		right auto
+		cursor pointer
+		display block
+		width 25px
+		padding-y(5px)
+		font-size 12px
+		color white
+		font-weight normal
+		text-decoration none
+		background brand-4
+		-webkit-border-bottom-right-radius 5px
+		-webkit-border-bottom-left-radius 5px
+		-moz-border-radius-bottomright 5px
+		-moz-border-radius-bottomleft 5px
+		-o-border-bottom-right-radius 5px
+		-o-border-bottom-left-radius 5px
+		border-bottom-right-radius 5px
+		border-bottom-left-radius 5px

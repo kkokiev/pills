@@ -70,178 +70,27 @@ if(!(window.console && console.log)) {
 	*
 	*/
 
-
 	/*
 	*
-	*Setup show/hide .searchbar
+	*Hide .topline block
 	*
 	*/
-	var $searchBtnOpen = $('#search-open'),
-		$searchBtnClose = $('#search-close'),
-		$searchWrap = $('#search-wrap');
-
-
-		$body.on('click', '#search-open', function(event) {
-			event.preventDefault();
-			$(this).css('display', 'none');
-			$searchBtnClose.css('display', 'inline-block');
-			$searchWrap.slideDown();
-		});
-
-		$body.on('click', '#search-close', function(event) {
-			event.preventDefault();
-			$(this).css('display', 'none');
-			$searchBtnOpen.css('display', 'inline-block');
-			$searchWrap.slideUp();
-		});
-
-		$body.on('click', function() {
-			$searchBtnClose.css('display', 'none');
-			$searchBtnOpen.css('display', 'inline-block');
-			$searchWrap.slideUp();
-		});
-
-		$body.on('click', '.js-page-search', function(event) {
-			event.stopPropagation();
-		});
-	/*
-	*
-	* end setup show/hide .searchbar
-	*
-	*/
-
-
-	/*
-	*
-	*setup image popup in search results
-	*
-	*/
-
-	$body.on('click', '.js-advertiser-header-img-btn', function(event) {
+	$body.on('click', '#js-topline-close-btn', function(event) {
 		event.preventDefault();
-		var btnHrefId = $(this).attr('href');
-		$(btnHrefId).fadeIn();
+		$('#js-topline-wrap').slideUp();
 	});
-
-	$body.on('click', '.js-advertiser-header-close-modal-btn', function(event) {
-		event.preventDefault();
-		$('.advertiser-header__img-modal').fadeOut();
-	});
-
-	$body.on('click', '.js-advertiser-header-img-modal', function(event) {
-		event.preventDefault();
-		$(this).fadeOut();
-	});
-
-	$body.on('click', '.js-advertiser-header-img-modal-body', function(event) {
-		event.stopPropagation();
-	});
-	/*
-	*
-	*end setup image popup in search results
-	*
-	*/
-
 
 
 	/*
 	*
-	*setup contact popup in search results
+	*Hide .topline-mobile block
 	*
 	*/
-	$body.on('click', '.js-contact-form-btn', function(event) {
+	$body.on('click', '#js-topline-mobile-close-btn', function(event) {
 		event.preventDefault();
-		$(this).next().fadeIn();
+		$('#js-topline-mobile').hide();
 	});
-
-	$body.on('click', '.js-close-modal-contact-btn', function(event) {
-		event.preventDefault();
-		$('.modal-contact').fadeOut();
-	});
-
-	$body.on('click', '.js-modal-contact', function(event) {
-		event.preventDefault();
-		$(this).fadeOut();
-	});
-
-	$body.on('click', '.js-modal-contact-body', function(event) {
-		event.stopPropagation();
-	});
-	/*
-	*
-	*end setup contact popup in search results
-	*
-	*/
-
-
-	/*
-	*
-	*setup advertiser slider and popup img
-	*
-	*/
-	var $popupSlider = $('.js-popup-slider');
-
-	/*owl*/
-	$('.owl-carousel.advertiser-slider__slider').owlCarousel({
-		navContainer: '.advertiser-slider__wrap',
-		nav: true,
-		loop: true,
-		margin: 10,
-		responsive: {
-			0: {
-				items: 1
-			},
-
-			480: {
-				items: 2
-			},
-
-			600: {
-				items: 3
-			},
-
-			740: {
-				items: 4
-			},
-
-			880: {
-				items: 5
-			},
-
-			1024: {
-				items: 6
-			}
-		}
-	});
-	/*owl end*/
-
-
-	$body.on('click', '.advertiser-slider__slide', function(){
-		var $imgSrc = $(this).find('img').attr('src');
-		$('.popup-slider__img-wrap img').hide();
-		$('.popup-slider__img-wrap img[src="' + $imgSrc + '"]').show();
-		$popupSlider.addClass('popup-slider_opened');
-
-	});
-
-	$body.on('click', '.js-popup-slider', function() {
-		$(this).removeClass('popup-slider_opened');
-	});
-
-	$body.on('click', '.js-popup-slider img', function(event) {
-		event.stopPropagation();
-	});
-
-	$body.on('click', '.js-close-popup-slider-btn', function(event) {
-		event.preventDefault();
-		$popupSlider.removeClass('popup-slider_opened');
-	});
-
-	/*
-	*
-	*setup advertiser slider and popup img
-	*
-	*/
+	
 
 
 })(jQuery);

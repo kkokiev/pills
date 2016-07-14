@@ -1,0 +1,58 @@
+.footer
+	border-bottom 20px solid white
+	
+	+below(size-tablet)
+		border-bottom 20px solid brand
+	
+	&__wrap
+		max-width 800px 
+		margin 0 auto 
+		padding-top 5px
+		padding-x(70px)
+		padding-bottom 15px
+		text-align center 
+		background-image url('images/back_footer.png')
+		background-repeat repeat-y
+		background-color white
+		-webkit-background-size 100% auto 
+		-moz-background-size 100% auto 
+		-o-background-size 100% auto 
+		background-size 100% auto
+		
+		+below(size-tablet)
+			width 100%
+			padding-x(5%)
+			background-image none
+			
+
+	&__logo-wrap
+		margin-y(5px)
+		text-align center
+		line-height 18px
+		
+	&__logo
+		display inline-block
+		max-width 16%
+		margin 10px 2%
+		vertical-align top
+		text-align center
+		text-decoration none
+		
+		+below(size-tablet)
+			max-width 42%
+		
+		img
+			max-width 100%
+			height auto
+			
+	&__info
+		margin-top 5px
+		color #4a4a4a
+		font-size 10px 
+		line-height 12px
+		
+		&_copyrights
+			font-size 12px
+			
+	&__nav
+		text-align center

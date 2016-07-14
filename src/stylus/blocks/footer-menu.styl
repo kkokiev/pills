@@ -1,0 +1,28 @@
+.footer-menu
+	clearfix()
+	display inline-block 
+	text-align center 
+	margin-top 5px
+	text-transform uppercase
+	
+	li
+		display inline-block
+		font-size 10px
+		line-height 18px
+		
+		&:after
+			content ' / '
+			
+		&:last-child
+			margin-left 0
+			
+			&:after
+				content ''
+		
+		a
+			color #7b3a8b
+			text-decoration none
+			
+			&:hover,
+			&:focus
+				text-decoration underline
