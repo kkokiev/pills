@@ -1,0 +1,100 @@
+.related
+	margin-y(20px)
+	padding-top 30px
+	border-top 1px dashed #65486d
+	
+	+below(size-tablet)
+		margin-y(10px)
+		padding-top 0
+		border-top 10px solid brand
+	
+	&__wrap
+		padding-top 35px
+		padding-bottom 15px
+		background #ddd4e0 url(images/back_related_kiss.png) 0 0 no-repeat
+		-webkit-border-radius 7px 
+		-moz-border-radius 7px
+		-o-border-radius 7px 
+		border-radius 7px
+		
+		+below(size-tablet)
+			padding 0
+			border-bottom 1px solid transparent
+			background #ddd4e0
+			-webkit-border-radius 0 
+			-moz-border-radius 0
+			-o-border-radius 0
+			border-radius 0
+			
+		
+	&__title
+		position relative
+		display inline-block
+		max-width 50%
+		padding 14px 35px 12px 10px
+		background #552963
+		color white
+		text-transform uppercase
+		font-size 14px
+		
+		+below(size-tablet)
+			padding 3px 15px 10px
+			background #AE9BB4
+		
+	&__title-deco
+		position absolute
+		top 0
+		left -50px
+		display block
+		height 50px
+		width 50px
+		background transparent url(images/back_related_title_purple.png) no-repeat
+		
+		+below(size-tablet)
+			display none
+		
+	&__list
+		display block
+		margin-y(20px)
+		margin-left 20px
+		margin-right 25px
+		
+		> li
+			position relative
+			padding-right 37px
+			margin-y(10px)
+			color #3a3a3a
+			tr(.3s)
+			
+			&:hover
+				padding-right 42px
+				
+				&:before
+					right 5px
+			
+			&:before
+				content ''
+				position absolute
+				top 0
+				bottom 0
+				right 0
+				margin-y(auto)
+				display block
+				height 16px
+				width 16px
+				background transparent url(images/arrow.png) no-repeat
+				-webkit-background-size cover
+				-moz-background-size cover
+				-o-background-size cover
+				background-size cover
+				tr(.3s)
+				
+				+below(size-tablet)
+					background transparent url(images/arrow-2.png) no-repeat
+					-webkit-background-size cover
+					-moz-background-size cover
+					-o-background-size cover
+					background-size cover
+			
+			> a
+				color inherit

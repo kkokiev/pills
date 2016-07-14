@@ -1,0 +1,26 @@
+.page
+	margin-top 55px
+	margin-bottom 45px
+	padding-x(7px)
+	
+	+below(size-tablet)
+		width 90%
+		margin-y(10px)
+		margin-x(auto)
+		
+	&__wrap
+		padding-bottom 25px
+		background white
+		-moz-box-shadow 0px 0px 7px 0px #292929
+		-webkit-box-shadow 0px 0px 7px 0px #292929
+		-o-box-shadow 0px 0px 7px 0px #292929
+		box-shadow 0px 0px 7px 0px #292929
+		filter: unquote('"progid:DXImageTransform.Microsoft.Shadow(color=#292929, Direction=NaN, Strength=7)"')
+		
+		+below(size-tablet)
+			background none
+			-moz-box-shadow none
+			-webkit-box-shadow none
+			-o-box-shadow none
+			box-shadow none
+			filter: unquote('"progid:DXImageTransform.Microsoft.Shadow(color=#292929, Direction=NaN, Strength=0)"')

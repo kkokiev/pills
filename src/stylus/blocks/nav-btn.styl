@@ -1,0 +1,30 @@
+.nav-btn
+	display none
+	
+	+below(size-tablet)
+		position absolute
+		top 0
+		bottom 0
+		right 15px
+		margin-y(auto)
+		display block
+		width 23px
+		height 20px
+		cursor pointer
+		
+	span
+		display block
+		margin-bottom 1px
+		height 6px
+		background #848484
+		
+		&:first-child
+			border-bottom 1px solid #c4c4c4
+			
+		&:nth-child(2)
+			border-top 1px solid #c4c4c4
+			border-bottom 1px solid #c4c4c4
+			
+		&:last-child
+			margin 0
+			border-top 1px solid #c4c4c4

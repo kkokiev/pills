@@ -24,15 +24,15 @@ if(!(window.console && console.log)) {
 
 	var $menuItemWithSubmenu = '.menu>li:has( > .sub-menu)';
 
-	//show and hide .sub-menu on width > 900
+	//show and hide .sub-menu on width > 768
 	$body.on('mouseenter focusin', $menuItemWithSubmenu, function() {
-		if ($(window).width() > 900) {
+		if ($(window).width() > 768) {
 			$(this).children('.sub-menu').stop().addClass("js-open").slideDown();
 		}
 	});
 
 	$body.on('mouseleave focusout', $menuItemWithSubmenu, function() {
-		if ($(window).width() > 900) {
+		if ($(window).width() > 768) {
 			$(this).children('.sub-menu').stop().removeClass('js-open').slideUp();
 		}
 	});
@@ -46,27 +46,33 @@ if(!(window.console && console.log)) {
 
 	/*
 	*
-	*Setup show/hide navbar for desktop width < 900px
+	*Setup show/hide .main-nav for desktop width < 768px
 	*
 	*/
-	var $navBtn = $('#mobile-btn'),
-		$navBar = $('#navbar');
+	var $navBar = $('#js-main-nav');
 
-	$body.on('click', '#mobile-btn', function(event) {
+	$body.on('click', '#js-nav-btn', function(event) {
 		event.preventDefault();
 
-		if( $navBar.hasClass('js-nav-open')) {
-			$navBar.removeClass('js-nav-open').slideUp();
-			$navBtn.removeClass('topline__mobile-btn_navigation-close');
+		if( $navBar.hasClass('main-nav_open')) {
+			$navBar.removeClass('main-nav_open');
+			
 		} else {
-			$navBar.addClass('js-nav-open').slideDown();
-			$navBtn.addClass('topline__mobile-btn_navigation-close');
+			$navBar.addClass('main-nav_open');
 		}
 
 	});
+
+	$body.on('click', '#js-main-nav', function(event) {
+		$navBar.removeClass('main-nav_open');	
+	});
+
+	$body.on('click', '.menu', function(event) {
+		event.stopPropagation();
+	});
 	/*
 	*
-	* end setup .navbar
+	* end setup .main-nav
 	*
 	*/
 

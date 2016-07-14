@@ -1,4 +1,14 @@
 .header
+	width 100%
+	background white
+	
+	+below(size-tablet)
+		z-index 2000
+		position fixed
+		top 0
+		left 0
+		height 50px
+		border-bottom 2px solid brand
 	
 	&__link-wrap
 		clearfix()
@@ -6,3 +16,7 @@
 	&__logo
 		margin-y(10px)
 		text-align center
+		
+		+below(size-tablet)
+			margin 0
+			padding-y(5px)
