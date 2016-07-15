@@ -1,0 +1,82 @@
+.hero
+	position relative
+	margin-y(30px)
+	padding-left 18px
+	
+	+below(size-tablet)
+		margin 0
+		padding-y(10px)
+		padding-left 0
+	
+	&__content
+		padding-y(25px)
+		padding-left 45px
+		padding-right 25px 
+		background url('images/back_texturerose.jpg')
+		-webkit-border-radius 7px 
+		-moz-border-radius 7px
+		-o-border-radius 7px  
+		border-radius 7px
+		
+		+below(size-tablet)
+			padding-x(5%)
+			background #AE9BB4
+			-webkit-border-radius 0 
+			-moz-border-radius 0
+			-o-border-radius 0  
+			border-radius 0
+			
+		&_alt
+			padding-right 70px
+			background #f8f8f8
+			
+			+below(size-tablet)
+				padding-y(10px)
+				padding-x(5%)
+				background #d4d4d4
+		
+		p
+			font-size 18px
+			
+		a
+			color main
+			font-weight bold
+			
+	&__content-deco
+		position absolute
+		top 22px
+		right 25px
+		height 30px
+		font-size 30px
+		line-height 30px
+		font-family font-icon
+		
+		+below(size-tablet)
+			display none
+			
+	&__deco
+		position absolute
+		top 0
+		left 0
+		height 71px
+		width 63px
+		background url('images/trombone_left.png')
+		-webkit-background-size cover
+		-moz-background-size cover
+		-o-background-size cover
+		background-size cover
+		
+		+below(size-tablet)
+			display none
+			
+	&__bottom
+		height 18px
+		background url('images/meaplus_backbottom.png')
+		-webkit-background-size 100% 100%
+		-moz-background-size 100% 100%
+		-o-background-size 100% 100%
+		background-size 100% 100%
+		
+		+below(size-tablet)
+			display none
+	

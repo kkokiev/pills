@@ -1,0 +1,50 @@
+.page-table-row
+	display table
+	width 100%
+	margin-y(15px)
+	
+	+below(size-smallest)
+		display block
+	
+	> div
+		display table-cell
+		vertical-align middle
+		
+		+below(size-smallest)
+			display block
+		
+		&:first-child
+			width 40%
+			padding-left 20px
+			
+			+below(size-smallest)
+				width 100%
+				padding-left 0
+			
+		&:last-child
+			width 60%
+			
+			+below(size-smallest)
+				width 100%
+			
+		img
+			width 100%
+			
+	&_alt
+		
+		> div
+			
+			&:first-child
+				width 60%
+				padding-left 0
+				
+				+below(size-smallest)
+					width 100%
+			
+			&:last-child
+				width 40%
+				padding-right 20px
+				
+				+below(size-smallest)
+					width 100%
+					padding-right 0

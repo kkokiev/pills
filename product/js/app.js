@@ -117,7 +117,7 @@ if(!(window.console && console.log)) {
 				.hide();
 
 			$(this).parent().siblings('.quizz__answer'+'[data-question="' + $(event.currentTarget).parent().data('question') + '"]' + '[data-answer="' + $(event.currentTarget).data('answer') + '"]').show();
-			
+
 		} else {
 			$(this).removeClass('selected');
 			$(this)
@@ -129,6 +129,28 @@ if(!(window.console && console.log)) {
 	/*
 	*
 	*end setup sidebar quizz
+	*
+	*/
+
+
+	/*
+	*
+	*setup .accordion
+	*
+	*/
+		$body.on('click', '.accordion__item', function(event){
+			if(!$(event.currentTarget).hasClass('opened')) {
+				$('.accordion__item').removeClass('opened');
+				$('.accordion__item-body').stop().slideUp();
+				$(this).addClass('opened').find('.accordion__item-body').slideDown();
+			} else {
+				$('.accordion__item-body').stop().slideUp();
+				$(this).removeClass('opened');
+			}
+		});
+	/*
+	*
+	*end setup .accordion
 	*
 	*/
 	

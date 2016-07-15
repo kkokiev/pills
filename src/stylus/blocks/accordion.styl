@@ -1,0 +1,160 @@
+.accordion
+	margin-top 15px
+	margin-bottom 35px
+	
+	&__item
+		padding 10px 0
+		color #552963	 
+		font-size 20px
+		font-weight 200 
+		line-height 30px
+		cursor pointer
+		border-top dashed 1px #ad9db1
+		
+		&:nth-child(2n)
+			color brand-2
+			
+	&__item-header
+		position relative
+		padding-right 45px
+		
+		&:hover,
+		&:focus
+			
+			.accordion__item-header-icon
+				-webkit-transform rotate(-90deg) 
+				-moz-transform rotate(-90deg) 
+				-o-transform rotate(-90deg)
+				-ms-transform rotate(-90deg)
+				transform rotate(-90deg)
+				
+	&__item.opened
+		.accordion__item-header-icon
+			-webkit-transform rotate(-90deg) 
+			-moz-transform rotate(-90deg) 
+			-o-transform rotate(-90deg)
+			-ms-transform rotate(-90deg)
+			transform rotate(-90deg)
+		
+	&__item-header-icon
+		position absolute
+		top 6px
+		right 3px
+		display block
+		height 16px
+		width 16px
+		background url(images/arrow-2.png)
+		bg-image()
+		tr(.4s)
+		
+	&__item
+		
+		&:nth-child(2n)
+			
+			.accordion__item-header-icon
+				background url(images/arrow-3.png)
+				bg-image()
+				
+	&__item-body
+		display none
+		padding-top 35px
+		padding-bottom 20px
+		
+	&__item-body-wrap
+		position relative
+		padding-y(22px)
+		background #ddd4e0 
+		-webkit-border-radius 7px 
+		-moz-border-radius 7px
+		-o-border-radius 7px 
+		border-radius 7px
+		
+		+below(size-tablet)
+			padding-top 0
+			padding-bottom 15px
+		
+		p
+			margin-y(15px)
+			padding-x(30px)
+			font-size 16px
+			
+		a
+			color main
+			font-weight bold
+			
+	&__item-body-arrow
+		position absolute
+		top -23px
+		left auto
+		right 40px
+		display block
+		height 23px
+		width 46px
+		background url(images/answer_arrow_purple.png)
+		bg-image()
+		
+		+below(size-tablet)
+			left 0
+			right 0 
+			margin-x(auto)
+			background url(images/answer_arrow_purple_dark.png)
+			bg-image()
+		
+	&__item-label
+		position relative
+		display inline-block
+		max-width 50%
+		padding 10px 35px 10px 10px
+		background #552963
+		color white
+		text-transform uppercase
+		font-size 24px
+		font-weight bold
+		
+		+below(size-tablet)
+			width 100%
+			max-width 100%
+			font-size 18px
+			text-align center
+			padding-x(10px)
+			-webkit-border-top-left-radius 7px 
+			-moz-border-top-left-radius 7px
+			-o-border-top-left-radius 7px 
+			border-top-left-radius 7px
+			-webkit-border-top-right-radius 7px 
+			-moz-border-top-right-radius 7px
+			-o-border-top-right-radius 7px 
+			border-top-right-radius 7px
+		
+	&__item-label-deco
+		position absolute
+		top 0
+		left -50px
+		display block
+		height 50px
+		width 50px
+		background transparent url(images/back_related_title_purple.png) no-repeat
+		
+		+below(size-tablet)
+			display none
+		
+	&__item
+		
+		&:nth-child(2n)
+			.accordion__item-body-wrap
+				background #cfdcdc
+				
+			.accordion__item-body-arrow
+				background url(images/answer_arrow_green.png)
+				bg-image()
+				
+				+below(size-tablet)
+					background url(images/answer_arrow_green_dark.png)
+					bg-image()
+				
+			.accordion__item-label
+				background brand-2
+				
+			.accordion__item-label-deco
+				background transparent url(images/back_related_title_green.png) no-repeat
+		
