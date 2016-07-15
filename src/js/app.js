@@ -96,6 +96,41 @@ if(!(window.console && console.log)) {
 		event.preventDefault();
 		$('#js-topline-mobile').hide();
 	});
+
+
+	/*
+	*
+	*setup sidebar quizz
+	*
+	*/
+	$body.on('click', '.quizz__list li', function(event){
+		if(!$(event.currentTarget).hasClass('selected')) {
+			
+			$(this)
+				.addClass('selected')
+				.siblings()
+				.removeClass('selected');
+
+			$(this)
+				.parent()
+				.siblings('.quizz__answer')
+				.hide();
+
+			$(this).parent().siblings('.quizz__answer'+'[data-question="' + $(event.currentTarget).parent().data('question') + '"]' + '[data-answer="' + $(event.currentTarget).data('answer') + '"]').show();
+			
+		} else {
+			$(this).removeClass('selected');
+			$(this)
+				.parent()
+				.siblings('.quizz__answer')
+				.hide();
+		}
+	});
+	/*
+	*
+	*end setup sidebar quizz
+	*
+	*/
 	
 
 
