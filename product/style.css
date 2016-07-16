@@ -2829,6 +2829,9 @@ a {
 img {
   vertical-align: top;
 }
+.aligncenter {
+  text-align: center;
+}
 .accident {
   color: #000;
 }
@@ -3086,6 +3089,29 @@ img {
 }
 .accordion__item:nth-child(2n) .accordion__item-label-deco {
   background: transparent url("images/back_related_title_green.png") no-repeat;
+}
+.banner {
+  position: relative;
+  display: block;
+}
+.banner__bg {
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.banner__img {
+  position: absolute;
+  top: 205px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .body {
   position: relative;
@@ -3456,8 +3482,8 @@ img {
   background-size: 100% 100%;
 }
 .jargon__body {
-  padding-left: 40px;
-  padding-right: 33px;
+  padding-left: 30px;
+  padding-right: 23px;
   background: #fff;
 }
 .jargon__title {
@@ -3472,6 +3498,21 @@ img {
   color: #b33e8f;
   font-size: 16px;
   line-height: 24px;
+}
+.jargon__info_alt {
+  color: #000;
+}
+.jargon__list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 24px;
+  list-style-image: url("images/puce.jpg");
+}
+.jargon__img-link {
+  display: inline-block;
+}
+.jargon__img-link img {
+  width: 100%;
 }
 .jargon__footer {
   height: 14px;
@@ -3863,8 +3904,7 @@ text-decoration
   font-weight: bold;
 }
 .page-content__info img {
-  display: block;
-  width: auto;
+  display: inline-block;
   max-width: 100%;
 }
 .page-content__list {
@@ -3993,6 +4033,16 @@ text-decoration
     -o-box-shadow: none;
     box-shadow: none;
     filter: "progid:DXImageTransform.Microsoft.Shadow(color=#292929, Direction=NaN, Strength=0)";
+  }
+}
+.page__related {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .page__related {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .quizz__header {
@@ -4320,6 +4370,23 @@ text-decoration
 }
 .sidebar__item > img {
   max-width: 100%;
+}
+.table {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #fff;
+  border-bottom: dashed 1px #65486d;
+}
+.table td {
+  padding: 30px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: top;
+  border: dashed 1px #65486d;
+}
+.table tfoot td {
+  padding: 10px 5px;
 }
 .topline-mobile {
   position: fixed;
