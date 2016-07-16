@@ -1,0 +1,50 @@
+.related-story
+	display block
+	width 100%
+	margin-top 40px
+	padding-top 35px
+	clearfix()
+	text-decoration none
+	border-top 1px dashed black
+	
+	+below(size-tablet)
+		margin-y(15px)
+		padding-top 15px
+	
+	&__banner
+		float right 
+		width 468px 
+		padding-x(44px) 
+		line-height 139px
+		text-decoration none 
+		color white
+		font-size 30px 
+		background url('images/back_module_story.png')
+		single-line()
+		-webkit-background-size cover
+		-moz-background-size cover
+		-o-background-size cover
+		background-size cover
+		
+		+below(size-tablet)
+			width 100% 
+			padding 15px 5% 
+			font-size 18px
+			line-height 26px
+			background #7A5581
+			
+		span
+			+below(size-tablet)
+				&:before
+					content '> '
+
+		
+	&__img
+		float left
+		display block
+		height 139px
+		width 204px
+		margin-right -20px
+		
+		+below(size-tablet)
+			display none

@@ -1,0 +1,53 @@
+.story
+	clearfix()
+	
+	&__photo
+		float right
+		margin-y 5px
+		margin-left 20px
+		width 260px
+		
+		+below(size-tablet)
+			float none	
+		
+	&__quote
+		position relative
+		padding-top 30px
+		padding-bottom 30px
+		font-style italic
+		
+		&:before
+			display block
+			position absolute
+			top 50px
+			right 280px
+			content "“"
+			color rgb(178, 65, 144);
+			font-family font-special
+			font-size 120px
+			line-height 0
+			font-style normal
+			
+			+below(size-tablet)
+				right 0
+			
+		&:after
+			display block
+			position absolute
+			bottom -10px
+			left 0
+			content "”"
+			color rgb(178, 65, 144);
+			font-family font-special
+			font-size 120px
+			line-height 0
+			font-style normal
+		
+		p
+			margin-y(15px)
+			font-size 16px
+		
+		a
+			display inline-block
+			color main
+			font-weight bold
