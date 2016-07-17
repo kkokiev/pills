@@ -3586,6 +3586,129 @@ sup {
   -o-transform: rotate(4deg);
   transform: rotate(4deg);
 }
+.home-mobile {
+  display: none;
+  padding: 15px 5%;
+}
+@media only screen and (max-width: 1100px) {
+  .home-mobile {
+    display: block;
+  }
+}
+.home-mobile__header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.home-mobile__title {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.home-mobile__header-img {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+.home-mobile__subtitle {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.home-mobile__product {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.home-mobile__product-wrap {
+  display: block;
+  padding: 15px 5%;
+  color: #fff;
+  text-decoration: none;
+  background: #ae9bb4;
+}
+.home-mobile__product-wrap h3 {
+  font-size: 22px;
+}
+.home-mobile__product-wrap img {
+  width: 50%;
+}
+.home-mobile__product-wrap p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.home-mobile__accident {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.home-mobile__accident-wrap {
+  display: block;
+  text-decoration: none;
+}
+.home-mobile__accident-wrap img {
+  width: 90%;
+}
+.home-mobile__accident-content {
+  display: block;
+  padding: 15px 5%;
+  color: #fff;
+  background: #458889;
+}
+.home-mobile__accident-content h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+.home-mobile__accident-content p {
+  padding-top: 5px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.home-mobile__accident-content p span {
+  font-weight: bold;
+}
+.home-mobile__things {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.home-mobile__things-wrap {
+  display: block;
+  padding: 15px 5% 0;
+  color: #000;
+  text-decoration: none;
+  background: #d4d4d4;
+}
+.home-mobile__things-wrap h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+.home-mobile__things-wrap p {
+  padding-top: 5px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.home-mobile__things-wrap img {
+  width: 100%;
+}
+.home-mobile__think {
+  margin-bottom: 20px;
+  text-align: right;
+}
+.home-mobile__think-wrap {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background: #b33e8f;
+}
+.home-mobile__think-img {
+  width: 100%;
+}
+.home-mobile__think-content {
+  padding: 15px 5%;
+}
 .home-product {
   z-index: 10;
   position: absolute;
@@ -3901,6 +4024,11 @@ sup {
   -moz-opacity: 1;
   -khtml-opacity: 1;
   opacity: 1;
+}
+@media only screen and (max-width: 1100px) {
+  .home {
+    display: none;
+  }
 }
 .home__header {
   padding-top: 60px;
