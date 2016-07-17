@@ -1,17 +1,29 @@
 .main
 	position relative
+	background #cac0ce
 	background -moz-radial-gradient(center, ellipse cover,  #cac0ce 0%, #4d235b 100%)
 	background -webkit-radial-gradient(center, ellipse cover,  #cac0ce 0%,#4d235b 100%)
 	background -o-radial-gradient(center, ellipse cover,  #cac0ce 0%,#4d235b 100%)
 	background -ms-radial-gradient(center, ellipse cover,  #cac0ce 0%,#4d235b 100%)
-	background url(images/back_texture.png), radial-gradient(ellipse at center,  #cac0ce 0%,#4d235b 100%) 
-	filter: unquote('"progid:DXImageTransform.Microsoft.gradient( startColorstr='#cac0ce', endColorstr='#4d235b',GradientType=1 )"')
+	background radial-gradient(ellipse at center,  #cac0ce 0%,#4d235b 100%) 
 	background-repeat repeat
 	
 	+below(size-tablet)
-		padding-top 50px
+		padding-top 65px
+		background #4D235B
 		
 	&__wrap
+		position relative
+		z-index 2
 		max-width 1024px
 		margin-x(auto)
+		
+	&__bg
+		z-index 1
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background url(images/back_texture.png)
 		

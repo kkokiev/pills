@@ -79,6 +79,14 @@ tr($time){
 	transition all $time ease
 }
 
+opacity-full(){
+	-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"')
+	filter unquote('alpha(opacity=0)')
+	-moz-opacity 0
+	-khtml-opacity 0
+	opacity 0
+}
+
 opacity-light(){
 	-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"')
 	filter unquote('alpha(opacity=80)')

@@ -1,0 +1,61 @@
+.home-women-think
+	z-index 1
+	position absolute 
+	top 0 
+	right 12px   
+	margin-top -235px
+	-webkit-transition all 0.2s ease-in-out 
+	-moz-transition all 0.2s ease-in-out 
+	-o-transition all 0.2s ease-in-out 
+	transition all 0.2s ease-in-out
+	
+	&__wrap
+		display inline-block
+		color black
+		text-decoration none
+		
+		h3
+			color white 
+			font-size 24px 
+			line-height 28px
+			text-align center
+			
+	&__img-text
+		display block
+		padding-left 30px
+		margin-top 5px
+		margin-x(auto)
+		
+	&__img-wrap
+		display block
+		position relative
+		
+	&__img
+		position absolute
+		margin-top -12px 
+		left -5px
+		opacity-none()
+		-webkit-transition all 0.2s ease-in-out 
+		-moz-transition all 0.2s ease-in-out 
+		-o-transition all 0.2s ease-in-out 
+		transition all 0.2s ease-in-out
+		
+	&__img-hover
+		position absolute
+		margin-top -12px  
+		left -5px
+		opacity-full()
+		-webkit-transition all 0.2s ease-in-out 
+		-moz-transition all 0.2s ease-in-out 
+		-o-transition all 0.2s ease-in-out 
+		transition all 0.2s ease-in-out 
+		
+
+.home-women-think
+	&:hover
+		
+		.home-women-think__img
+			opacity-full()
+			
+		.home-women-think__img-hover
+			opacity-none()
