@@ -1,0 +1,29 @@
+.review-list
+	margin-y(15px)
+	
+	> li
+		clearfix()
+		padding-y(15px)
+		border-bottom 1px dashed #7e6685
+		
+		> a
+			display block
+			float right
+			width 15%
+			
+			img
+				width 100%
+			
+		> p
+			float left
+			width 80%
+			font-style italic
+			
+	> li
+		&:nth-child(2n)
+			
+			> a
+				float left
+				
+			> p 
+				float right

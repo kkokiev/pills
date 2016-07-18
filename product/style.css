@@ -2830,6 +2830,7 @@ a {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: inherit;
 }
 img {
   vertical-align: top;
@@ -4508,6 +4509,37 @@ text-decoration
   margin: 0;
   border-top: 1px solid #c4c4c4;
 }
+.ordered-list {
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+.ordered-list > li {
+  color: #552963;
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 28px;
+  border-top: dashed 1px #ad9db1;
+}
+.ordered-list > li:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.ordered-list > li:nth-child(2n) {
+  color: #458889;
+}
+.ordered-list > li > span {
+  float: right;
+  display: block;
+  width: 10%;
+  font-size: 30px;
+  font-family: 'SpecialElite';
+  text-align: center;
+}
+.ordered-list > li > div {
+  float: right;
+  width: 90%;
+}
 .p404 {
   max-width: 920px;
   margin: 0 auto;
@@ -5075,6 +5107,39 @@ text-decoration
   border-top: 5px solid #c1d4d5;
   border-bottom: 5px solid #c1d4d5;
 }
+.review-list {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.review-list > li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #7e6685;
+}
+.review-list > li:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.review-list > li > a {
+  display: block;
+  float: right;
+  width: 15%;
+}
+.review-list > li > a img {
+  width: 100%;
+}
+.review-list > li > p {
+  float: left;
+  width: 80%;
+  font-style: italic;
+}
+.review-list > li:nth-child(2n) > a {
+  float: left;
+}
+.review-list > li:nth-child(2n) > p {
+  float: right;
+}
 .sidebar {
   margin-top: 55px;
   margin-bottom: 45px;
@@ -5151,6 +5216,7 @@ text-decoration
   width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
+  background: #fff;
   border: 1px solid #fff;
   border-bottom: dashed 1px #65486d;
 }
@@ -5161,8 +5227,24 @@ text-decoration
   vertical-align: top;
   border: dashed 1px #65486d;
 }
+.table td p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.table td a {
+  font-weight: bold;
+}
 .table tfoot td {
   padding: 10px 5px;
+}
+.table tfoot td p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.table tfoot td a {
+  font-weight: bold;
 }
 .topline-mobile {
   position: fixed;
