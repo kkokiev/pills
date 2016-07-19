@@ -188,9 +188,19 @@ if(!(window.console && console.log)) {
 		var filterOptionText = $(this).text();
 		$('#filter-text').text(filterOptionText);
 
+		//default status for .filter__item`s
+		makeFilterItemsDefault();
+
 		var filterValue = $(this).attr('data-filter');
 		$('.filter__body').isotope({ filter: filterValue });
+
 	});
+
+	var makeFilterItemsDefault = function(){
+		$('.filter__item').removeClass('filter__item_selected');
+		$('.filter__item-img').removeClass('filter__item-img_show');
+		$('.filter__item-answer').hide();
+	};
 
 	//setup isotope
 	setTimeout(function(){
@@ -199,11 +209,47 @@ if(!(window.console && console.log)) {
 			layoutMode: 'masonry',
 			masonry: {
 				columnWidth: 1,
-                isOriginLeft: true,
-                gutter:0
+				isOriginLeft: true,
+				gutter:0
 			}
 		});
 	}, 200);
+
+	//setup items
+	$body.on('click', '.filter__item', function(event){
+		if($(this).hasClass('filter__item_selected')) {
+			makeFilterItemsDefault();
+		} else {
+			$('.filter__item').removeClass('filter__item_selected');
+			$(this).addClass('filter__item_selected');
+			$('.filter__item-img').addClass('filter__item-img_show');
+			$(this).find('.filter__item-img').removeClass('filter__item-img_show');
+
+			var $thisAnswer = $(this).find('.filter__item-answer');
+			var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+			if ( parseInt($(this).offset().left) < parseInt(width/2) ) {
+				$thisAnswer.css("left", "90%");
+				$thisAnswer.find('img').css("left", "-23px");
+				$thisAnswer.find('img').attr("src", "images/box_answer_fleche_left.png");
+			} else {
+				$thisAnswer.css("left", "-200px");
+				$thisAnswer.find('img').css("left", "100%");
+				$thisAnswer.find('img').attr("src", "images/box_answer_fleche_right.png");
+			}
+
+			$('.filter__item-answer').hide();
+			$thisAnswer.show();
+		}
+	});
+
+	$body.on('click', function(event){
+		makeFilterItemsDefault();
+	});
+
+	$body.on('click', '.filter__item', function(event){
+		event.stopPropagation();
+	});
 
 
 })(jQuery);

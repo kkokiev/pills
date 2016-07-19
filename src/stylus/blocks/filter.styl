@@ -73,13 +73,24 @@
 		float left
 		cursor pointer
 		
+		&_selected
+			z-index 80
+		
 	&__item-method
 		float left
 		
 		img
 			display block
+			
+	&__item-img
+		position relative
+		z-index 1
+		
+		&_show
+			z-index 3
 		
 	&__item-img-colored
+		z-index 2
 		position absolute
 		top 0
 		left 0

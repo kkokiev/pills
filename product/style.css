@@ -2843,13 +2843,6 @@ sup {
 .aligncenter {
   text-align: center;
 }
-.isotope .isotope-item {
-  -webkit-transition-property: right, top, -webkit-transform, opacity;
-  -moz-transition-property: right, top, -moz-transform, opacity;
-  -ms-transition-property: right, top, -ms-transform, opacity;
-  -o-transition-property: right, top, -o-transform, opacity;
-  transition-property: right, top, transform, opacity;
-}
 .accident {
   color: #000;
 }
@@ -3303,13 +3296,24 @@ sup {
   float: left;
   cursor: pointer;
 }
+.filter__item_selected {
+  z-index: 80;
+}
 .filter__item-method {
   float: left;
 }
 .filter__item-method img {
   display: block;
 }
+.filter__item-img {
+  position: relative;
+  z-index: 1;
+}
+.filter__item-img_show {
+  z-index: 3;
+}
 .filter__item-img-colored {
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
@@ -4418,7 +4422,7 @@ text-decoration
 }
 .main__wrap {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
