@@ -153,7 +153,57 @@ if(!(window.console && console.log)) {
 	*end setup .accordion
 	*
 	*/
-	
+
+
+	/*
+	*
+	*setup .filter
+	*
+	*/
+
+	//setup select menu
+	$body.on('click', '#filter-select', function(event){
+		if($(this).hasClass('js-opened')) {
+			$(this).removeClass('js-opened');
+			$('#filter-list').slideUp();
+		} else {
+			$(this).addClass('js-opened');
+			$('#filter-list').slideDown();
+		}
+	});
+
+	//hide filter list then click outside select menu
+	$body.on('click', function(event){
+		$('#filter-select').removeClass('js-opened');
+		$('#filter-list').slideUp();
+	});
+
+	$body.on('click', '#filter-select', function(event){
+		event.stopPropagation();
+	});
+
+	//setup filter
+	$body.on('click', '#filter-list li', function(event){
+		//change text
+		var filterOptionText = $(this).text();
+		$('#filter-text').text(filterOptionText);
+
+		var filterValue = $(this).attr('data-filter');
+		$('.filter__body').isotope({ filter: filterValue });
+	});
+
+	//setup isotope
+	setTimeout(function(){
+		$('.filter__body').isotope({
+			itemSelector: '.filter__item',
+			layoutMode: 'masonry',
+			masonry: {
+				columnWidth: 1,
+                isOriginLeft: true,
+                gutter:0
+			}
+		});
+	}, 200);
 
 
 })(jQuery);

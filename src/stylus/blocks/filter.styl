@@ -1,0 +1,123 @@
+.filter
+	
+	//select menu styles
+	&__header
+		margin-bottom 12px
+		
+	&__select
+		cursor pointer
+		z-index 100
+		position relative
+		width 256px
+		padding-left 40px
+		padding-right 15px
+		margin-right 40px
+		background #4D235B 
+		-webkit-border-radius 3px 
+		-moz-border-radius 3px 
+		border-radius 3px
+		
+	&__select-text
+		display block 
+		margin-top -5px 
+		font-size 16px
+		line-height 42px
+		color #fff
+		single-line()
+		
+	&__select-arrow
+		position absolute
+		left 0
+		top -5px
+		display block 
+		padding-left 15px
+		padding-right 7px
+		color white
+		font-family font-icon
+		font-size 8px 
+		line-height 42px
+		
+	&__select-list
+		position absolute
+		top 33px
+		right 0
+		display none
+		width 100%   
+		background #4D235B
+		-webkit-border-bottom-right-radius 7px 
+		-webkit-border-bottom-left-radius 7px 
+		-moz-border-radius-bottomright 7px 
+		-moz-border-radius-bottomleft 7px 
+		border-bottom-right-radius 7px 
+		border-bottom-left-radius 7px
+		
+		> li
+			padding 0 15px
+			color white 
+			font-size 10px
+			line-height 40px 
+			cursor pointer 
+			list-style none
+			
+
+	//item styles
+	&__body
+		width 100%
+		clearfix()
+		direction ltr	
+
+	&__item
+		position relative
+		direction rtl
+		z-index 70
+		float left
+		cursor pointer
+		
+	&__item-method
+		float left
+		
+		img
+			display block
+		
+	&__item-img-colored
+		position absolute
+		top 0
+		left 0
+		
+	&__item-name
+		display block
+		width 100% 
+		font-size 14px 
+		text-align center
+		
+	&__item-answer
+		z-index 90 
+		display none 
+		position absolute 
+		width 230px 
+		background #e7dcea 
+		-moz-box-shadow 1px 1px 2px #666566 
+		-webkit-box-shadow 1px 1px 2px #666566 
+		box-shadow 1px 1px 2px #666566
+		
+	&__item-answer-wrap
+		position relative
+		padding-top 10px
+		padding-bottom 20px
+		padding-x(25px)
+		
+		img
+			position absolute
+			top 25px
+			left -23px
+					
+	&__item-answer-title
+		padding-top 15px
+		padding-bottom 5px 
+		font-size 18px
+		font-weight bold
+		
+	&__item-answer-text
+		padding-bottom 10px
+		color black
+		font-size 14px
