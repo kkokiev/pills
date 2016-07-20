@@ -207,13 +207,13 @@ if(!(window.console && console.log)) {
 		$('.filter__body').isotope({
 			itemSelector: '.filter__item',
 			layoutMode: 'masonry',
+			originLeft: false,
 			masonry: {
 				columnWidth: 1,
-				isOriginLeft: true,
 				gutter:0
 			}
 		});
-	}, 200);
+	}, 300);
 
 	//setup items
 	$body.on('click', '.filter__item', function(event){
@@ -250,6 +250,36 @@ if(!(window.console && console.log)) {
 	$body.on('click', '.filter__item', function(event){
 		event.stopPropagation();
 	});
+	/*
+	*
+	*end setup .filter
+	*
+	*/
+
+
+	/*
+	*
+	*setup .filter-mobile
+	*
+	*/
+	$body.on('click', '.filter-mobile__accordion-item', function(event){
+		if($(this).hasClass('js-open')) {
+
+			$(this).removeClass('js-open');
+			$('.filter-mobile__accordion-item-body').hide();
+
+		} else {
+
+			$('.filter-mobile__accordion-item-body').hide();
+			$(this).addClass('js-open').find('.filter-mobile__accordion-item-body').show();
+
+		}
+	});
+	/*
+	*
+	*end setup .filter-mobile
+	*
+	*/
 
 
 })(jQuery);

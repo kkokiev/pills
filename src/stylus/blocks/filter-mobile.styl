@@ -1,0 +1,57 @@
+.filter-mobile
+	display none
+	padding-top 15px
+	
+	+below(size-large)
+		display block
+	
+	&__title
+		margin-bottom 15px
+		color white
+		
+	&__body
+		margin-bottom 15px
+		padding-y(15px)
+		padding-x(5%)
+		background white
+		
+	&__accordion-item
+		cursor pointer
+		
+		header
+			h3
+				position relative
+				padding-right 30px
+				font-size 18px
+				line-height 26px
+				font-weight bold
+				
+				&:before
+					content ''
+					position absolute
+					top 4px
+					right 0
+					display block
+					height 18px
+					width 19px
+					background url(images/arrow-4.png)
+					bg-image()
+					
+	&__accordion-item-body
+		display none
+		margin-bottom 15px
+		padding-bottom 15px
+		padding-x(5%)
+		text-align center
+		border-bottom 1px solid #D4D4D4
+		
+		img
+			max-width 100%
+			
+	&__accordion-item-subtitle
+		padding 10px 0
+		font-weight bold
+		text-align right
+		
+	&__accordion-item-text
+		text-align right
